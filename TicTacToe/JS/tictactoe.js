@@ -11,9 +11,9 @@ function placeXOrO(squareNumber) {
     if (!selectedSquares.some(element => element.includes(squareNumber))) {
         let select = document.getElementById(squareNumber);
         if (activePlayer === "X") {
-            select.style.backgroundImage = 'url("Images/x.png")';
+            select.style.backgroundImage = 'url("Images/horses.jpg")';
         } else {
-            select.style.backgroundImage = 'url("Images/o.png")';
+            select.style.backgroundImage = 'url("Images/legs.jpg")';
         }
         //squareNumber AND activePlayer ARE CONCATENATED TOGETHER AND ADDED TO ARRAY
         selectedSquares.push(squareNumber + activePlayer);
@@ -23,7 +23,7 @@ function placeXOrO(squareNumber) {
         } else {
             activePlayer = "X";
         }
-        audio('./Media/place.mp3');
+        audio('./Media/clap.wav');
         if (activePlayer === "O") {
             disableClick();
             setTimeout(function() {computerTurn();}, 1000);
@@ -62,7 +62,7 @@ function checkWinConditions() {
     else if (arrayIncludes('6O', '4O', '2O')) {drawWinLine(100, 508, 510, 90)}
     else if (arrayIncludes('0O', '4O', '8O')) {drawWinLine(100, 100, 520, 520)}
     else if (selectedSquares.length >= 9) {
-        audio('./Media/tie.mp3');
+        audio('./Media/fart.wav');
         setTimeout(function() {resetGame(); }, 500);
     }
     function arrayIncludes(squareA, squareB, squareC) {
@@ -116,7 +116,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         cancelAnimationFrame(animationLoop);
     }
     disableClick();
-    audio('./Media/winGame.mp3');
+    audio('./Media/cheer.wav');
     animateLineDrawing();
     setTimeout(function () { clear(); resetGame(); }, 1000);
 }
