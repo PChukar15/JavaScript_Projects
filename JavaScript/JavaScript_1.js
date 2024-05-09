@@ -30,3 +30,15 @@ function Hello_World_Function() {
     var A = document.getElementsByClassName("Click");
     A[0].innerHTML = "The text has changed!";
 }
+
+var c = document.getElementById("Canvas_Name");
+var ctx = c.getContext("2d");
+
+//Create gradient
+var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 150);
+grd.addColorStop(0, "purple");
+grd.addColorStop(1, "black");
+
+//Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(0, 0, 500, 250);
