@@ -48,7 +48,7 @@ function getTopping(runningTotal, text1) {
         toppingTotal = 0;
     }
     runningTotal = (runningTotal + toppingTotal);
-    console.log("total selected topping items: " + toppingCount);
+    console.log("total selected topping items: " + toppingCount); //SHOWS UP IN CONSOLE
     console.log(toppingCount + " topping - 1 free topping = " + "$" + toppingTotal + ".00");
     console.log("topping text1: " + text1);
     console.log("Purchase Total: " + "$" + runningTotal + ".00");
