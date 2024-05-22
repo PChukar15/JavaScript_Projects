@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- HEAD -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Emmett Espinosa</title>
+    <link rel="shortcut icon" type="img/jpg" href="Images/background here.png"> <!-- IMAGE NEEDED -->
+    <link rel="stylesheet" type="text/css" href="CSS/portfolio.css">
+  </head>
+
+  <!-- BODY -->
+  <body class="Background">
+
+    <!-- NAVBAR -->
+    <div class="Navbar">
+      <a class="active" href="#Home">Home</a>
+      <!-- NEW SECTION ADDED -->
+      <a href="#Slideshow">Slideshow</a>
+      <a href="#About">About</a>
+      <a href="#GitHub">GitHub</a>
+      <!-- ONCLICK AND ONDBLCLICK FUNCTIONS ADDED TO OPEN AND CLOSE THE CONTACT FORM -->
+      <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
+    </div>
+
+    <!-- BACKGROUND VIDEO -->
+    <div id="Home">
+      <video autoplay muted loop id="Fire_Video">
+        <source src="Images/Fire.mp4" type="video/mp4">
+        <!-- DISPLAY MESSAGE IF VIDEO FAILS TO RUN -->
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
+
+    <!-- VIDEO TEXT -->
+    <div class="Video_Text">
+      <h1 class="white-text">Emmett Espinosa's Portfolio</h1>
+      <strong>
+        <p class="center">
+          <q>Nerds really do make the world go round.</q>
+          <br>-James Ponti
+          <br>
+          <br>My name is Emmett Espinosa. Welcome to my portfolio website.
+          <br>On it, I will tell you about my background and experience.
+          <br>
+          <br>Thank you for stopping by and enjoy!
+        </p>
+      </strong>
+    </div>
+
+    <!-- SLIDESHOW SECTION ADDED -->
+    <div id="Slideshow">
+      <div id="Slideshow_Background">
+        <div id="Slideshow_Container">
+          <!-- SLIDE 1 OF 6 -->
+          <div class="mySlides fade">
+            <img class="Slideshow_Images" src="Images/face.jpg" alt="Picture of me">
+            <div class="text">Some text here!</div>
+          </div>
+          <!-- SLIDE 2 OF 6 -->
+          <div class="mySlides fade">
+            <img class="Slideshow_Images" src="Images/dog.jpg" alt="Oops">
+            <div class="text">Some text here!</div>
+          </div>
+          <!-- SLIDE 3 OF 6 -->
+          <div class="mySlides fade">
+            <img class="Slideshow_Images" src="Images/bro.jpg" alt="Oops">
+            <div class="text">Some more text here!</div>
+          </div>
+          <!-- SLIDE 4 OF 6 -->
+          <div class="mySlides fade">
+            <img class="Slideshow_Images" src="Images/sack.jpg" alt="Oops">
+            <div><a class="text" href="https://github.com/PChukar15" target="_blank">My GitHub!</a></div>
+          </div>
+          <!-- SLIDE 5 OF 6 -->
+          <div class="mySlides fade">
+            <img class="Slideshow_Images" src="Images/monty.jpg" alt="Oops">
+            <div><a class="text" href="https://www.linkedin.com/in/emmett-espinosa-0353962bb/" target="_blank">I also have a LinkedIn!</a></div>
+          </div>
+          <!-- SLIDE 6 OF 6 -->
+          <div class="mySlides fade">
+            <img class="Slideshow_Images" src="Images/fire.JPEG" alt="Oops">
+            <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div>
+          </div>
+          <!-- PREVIOUS AND NEXT BUTTONS -->
+          <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br> <!-- ADDS A SPACE BETWEEN THE SLIDESHOW IMAGES AND THE DOTS -->
+
+        <!-- SLIDESHOW DOTS (THESE ARE ANOTHER WAY FOR USERS TO NAVIGATE THROUGH THE SLIDESHOW) -->
+        <div style="text-align: center">
+          <span class="dots" onclick="currentSlide(1)"></span>
+          <span class="dots" onclick="currentSlide(2)"></span>
+          <span class="dots" onclick="currentSlide(3)"></span>
+          <span class="dots" onclick="currentSlide(4)"></span>
+          <span class="dots" onclick="currentSlide(5)"></span>
+          <span class="dots" onclick="currentSlide(6)"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <div class="Row" id="About">
+      <!-- LEFT COLUMN -->
+      <div class="Column_2">
+        <img src="Images/self.jpg" alt="Oops">
+      </div>
+      <!-- RIGHT COLUMN -->
+      <div class="Column_1">
+        <h1>About</h1>
+        <p>I am Emmett J Espinosa, a 19 year-old aspiring software engineer out or oregon.
+          <br>
+          <br>I am currently enrolled in <a href="https://www.learncodinganywhere.com" target="_blank">
+          The Tech Academy</a>'s Python Developer Boot Camp, and training in the following web and programming
+          languages: HTML, CSS, JavaScript, Python.
+          <br>
+          <br>I am currently a student but would love to work with you in the future.
+          <a onclick="openForm()" class="contact">Contact</a> me below!
+        </p>
+      </div>
+    </div>
+
+    <!-- GitHub SECTION -->
+    <div class="Row" id="GitHub">
+      <!-- LEFT COLUMN -->
+      <div class="Column_1">
+        <h1>GitHub/LinkedIn</h1>
+        <p>You can view my coding projects on my GitHub profile here:
+          <br>
+          <p class="center"><a href="https://github.com/PChukar15" target="_blank">My GitHub!</a>
+          <br>
+          <p>You can also view my LinkedIn here:
+          <br>
+          <p class="center"><a href="https://www.linkedin.com/in/emmett-espinosa-0353962bb/" target="_blank">My LinkedIn!</a></p>
+        </p>
+      </div>
+      <!-- RIGHT COLUMN -->
+      <div class="Column_2">
+        <a href="https://github.com/PChukar15" target="_blank"><img src="Images/GitHub.png"></a>
+      </div>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <div id="Contact">
+      <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+      <div class="form-popup" id="myForm">
+        <form action="https://formspree.io/f/xpzvkwdv" method="POST" class="form-container">
+          <h1>Contact</h1>
+          <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Type your name here" name="name" required>
+          <label for="phone"><b>Phone</b></label>
+            <input type="text" placeholder="Type your phone number here" name="name" required>
+          <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Type your email address here" name="name" required>
+          <label for="message"><b>Message</b></label>
+            <input type="text" placeholder="Type your message here" name="name" required>
+          <button type="submit" class="btn">SUBMIT</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+      <p class="center"><a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></p>
+      <br>
+    </footer>
+    <script src="JS/portfolio.js"></script>
+  </body>
+</html>
