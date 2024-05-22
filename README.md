@@ -9,7 +9,9 @@ A basic AJAX demo project designed to carry out simple tasks.
 
 <h1>Basic Javascript Projects</h1>
 Familiarizations with Javascript basics through small projects. Topics covered include:
-<ul>Expressions</ul>
+<ul>
+  <li>Expressions</li>
+</ul>
 
 <h1>Pizza Menu</h1>
 This project is a menu used to customize and order a pizza with a variety of toppings. It then takes the input information and calculates a price for the order.
